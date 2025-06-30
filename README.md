@@ -27,10 +27,14 @@ pip install numpy==1.26.2
 ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
 ```
 
+## Add some settings
+- Add your own elasticsearch and milvus setting in line 103-111 of the file `include/config/common_config.py` and line 9-18 of the file `include/config/query_recommend_config.py`.
+- Add your own ner setting in line 37-40 of the file `include/config/common_config.py`.
+
 ## Start your first query
-You can input your query in line 431 of the file `pipeline/functions.py`.
+You can input your query in line 395 of the file `pipeline/functions.py`.
 ```python
-query = """今天天气如何？""" # input your own query
+query = """Give me some latest news about Iran-Israel conflict.""" # input your own query
 ```
 After that, you can run the file `pipeline/functions.py` and wait for the result.
 
@@ -38,14 +42,14 @@ After that, you can run the file `pipeline/functions.py` and wait for the result
 The answer to the query you entered will be printed on the console in the form of a JSON list, where each JSON object will contain the following fields.
 
 
-｜fields｜explanation｜remark｜
-｜----｜----｜----｜
-｜type｜Type of currect JSON object, the optional values include the following categories: "state", "intention_query", "ref_page", "ref_answer", "text", "time_line", "text_end", "recommendation" ｜｜
-｜data｜The specific value of the current element，and its format will change with the value of the text field.｜｜
-｜query｜The query entered by the user｜｜
-｜qa_series_id｜｜Ignoreable｜
-｜qa_pair_collection_id｜｜Ignoreable｜
-｜qa_pair_id｜｜Ignoreable｜
+|fields|explanation|remark|
+|----|----|----|
+|type|Type of currect JSON object, the optional values include the following categories: "state", "intention_query", "ref_page", "ref_answer", "text", "time_line", "text_end", "recommendation" ||
+|data|The specific value of the current element，and its format will change with the value of the text field.||
+|query|The query entered by the user||
+|qa_series_id||Ignoreable|
+|qa_pair_collection_id||Ignoreable|
+|qa_pair_id||Ignoreable|
 
 ### Type "state" object
 There will be only three JSON object of which the value of the text field is "state", and their values of the data field will be "search", "organized" and "complete", relatively. These three object symbolize the beginning of the search phase, the answer organization phase and the completion of the answer.
