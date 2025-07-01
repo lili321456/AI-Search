@@ -162,7 +162,7 @@ class CommonConfig:
             },
             "SW_CONFIGS": {
                 "disable": "true",
-                "server_url": "47.96.11.75:11800",
+                "server_url": "xxx",
                 "service_name": "service-sw",
                 "instance_name": "instance-sw",
             },

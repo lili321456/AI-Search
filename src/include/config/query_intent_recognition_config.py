@@ -27,8 +27,8 @@ class QueryIntentRecognitionConfig(CommonConfig):
                 "query_reinforce": {"scheme_id": "2c98d445-db2d-4424-b78d-b5120e00b2b6"},
             },
             "SUMMARY_SEARCH_CONFIG": {
-                "url": "http://120.55.164.41:8010/api/atlas/summary/search",
-                "token": "615e0e6eed4adb3b6d46a6c2e3c233ef6875b598554006d7345d96bcc304e3c6",
+                "url": "xxx",
+                "token": "xxx",
                 "time_range": 30,
                 "return_num": 20,
             },

@@ -37,7 +37,7 @@ def read_txt_to_list_of_dict(file_path):
 
 
 if __name__ == '__main__':
-    data_list = read_txt_to_list_of_dict('evaluation_rag/evaluation_dataset_xcy.txt')
+    data_list = read_txt_to_list_of_dict('evaluation_rag/evaluation_dataset.txt')
 
     # similarity 过滤版
     all_base_results_base = []
@@ -55,7 +55,7 @@ if __name__ == '__main__':
     all_base_results_rerank_base = []
 
     all_chunks = []
-    with open("rag_evaluation_xcy/0826_all_references.json", 'r', encoding='utf-8') as file:
+    with open("rag_evaluation/0826_all_references.json", 'r', encoding='utf-8') as file:
         all_chunks = json.load(file)
 
     for i, test_query_i_dict in enumerate(data_list[:20]):
@@ -269,5 +269,5 @@ if __name__ == '__main__':
         #     json.dump(all_base_results_rerank_sft, f, indent=4, ensure_ascii=False)
         # with open("0826_all_base_results_rerank_base.json", 'w', encoding="utf-8") as f:
         #     json.dump(all_base_results_rerank_base, f, indent=4, ensure_ascii=False)
-        with open("rag_evaluation_xcy/0826_all_base_results_rerank_sft_0829_all_old_database.json", 'w', encoding="utf-8") as f:
+        with open("rag_evaluation/0826_all_base_results_rerank_sft_0829_all_old_database.json", 'w', encoding="utf-8") as f:
             json.dump(all_base_results_rerank_0829_sft_all_old_database, f, indent=4, ensure_ascii=False)

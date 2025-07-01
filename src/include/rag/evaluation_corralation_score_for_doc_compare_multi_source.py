@@ -148,9 +148,9 @@ if __name__ == '__main__':
             json.dump(res_lis, f, indent=4, ensure_ascii=False)
 
     scores = []
-    # generate("rag_evaluation_xcy/rag_result_source_routing_exp")
+    # generate("rag_evaluation/rag_result_source_routing_exp")
 
-    with open('{}_sources.json'.format("rag_evaluation_xcy/rag_result_source_routing_exp"), 'r', encoding='utf-8') as file:
+    with open('{}_sources.json'.format("rag_evaluation/rag_result_source_routing_exp"), 'r', encoding='utf-8') as file:
         data_sources = json.load(file)
 
     def evaluate(data_sources, file_path):
@@ -165,9 +165,9 @@ if __name__ == '__main__':
         with open("{}_scores.json".format(file_path), 'w', encoding="utf-8") as f:
             json.dump(scores, f, indent=4, ensure_ascii=False)
 
-    # evaluate(data_sources[:], "rag_evaluation_xcy/rag_result_source_routing_exp")
+    # evaluate(data_sources[:], "rag_evaluation/rag_result_source_routing_exp")
 
-    with open('{}_scores.json'.format("rag_evaluation_xcy/rag_result_source_routing_exp"), 'r', encoding='utf-8') as file:
+    with open('{}_scores.json'.format("rag_evaluation/rag_result_source_routing_exp"), 'r', encoding='utf-8') as file:
         data_scores = json.load(file)
 
     excel_file = '1023_comparison_results_between_sources.xlsx'

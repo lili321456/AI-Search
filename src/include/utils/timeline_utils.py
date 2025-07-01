@@ -234,7 +234,7 @@ def search_img_by_text(params):
        'Content-Type': 'application/json',
        'Accept': '*/*',
        'Connection': 'keep-alive',
-        "Authorization": "Bearer sk-c7ziokjnv7hldcpb"
+        "Authorization": "xxx"
     }
     test_input = {
         "session_id": session_id,

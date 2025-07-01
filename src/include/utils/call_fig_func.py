@@ -30,7 +30,7 @@ def get_fig_filter(text_list, timeout=5, min_context_len=20, application="", max
             'Content-Type': 'application/json',
             'Accept': '*/*',
             'Connection': 'keep-alive',
-            "Authorization": "Bearer sk-c7ziokjnv7hldcpb"
+            "Authorization": "xxx"
         }
         if application == "timeline":
             if "strategy_config" in text_list:
@@ -72,7 +72,7 @@ def get_fig(text_list, timeout=6, min_context_len=20):
                 'Content-Type': 'application/json',
                 'Accept': '*/*',
                 'Connection': 'keep-alive',
-                "Authorization": "Bearer sk-c7ziokjnv7hldcpb"
+                "Authorization": "xxx"
             }
             text_list["strategy_config"] = dict()
             payload = json.dumps(text_list)

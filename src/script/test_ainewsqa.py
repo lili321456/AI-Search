@@ -22,7 +22,7 @@ def ainews_test_recommend_query():
     })
     headers = {
         'function': 'recommend_query',
-        'request-id': 'test_przhang',
+        'request-id': 'test',
         'session-id': '51a65e97-3ab8-422e-9cce-d2a738da4cb9',
         'Content-Type': 'application/json'
     }
@@ -36,7 +36,7 @@ def ainews_test_recommend_question():
     payload = json.dumps({})
     headers = {
         'function': 'recommend_question',
-        'request-id': 'test_przhang',
+        'request-id': 'test',
         'session-id': '51a65e97-3ab8-422e-9cce-d2a738da4cb9',
         'Content-Type': 'application/json'
     }

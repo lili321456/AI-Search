@@ -16,7 +16,7 @@ if __name__ == '__main__':
     parser.add_argument("--samples_file_name",
                         default='evaluation_pipeline/all_samples', help="")
     parser.add_argument('--question_field', default=[''], help="所有的问题类型")
-    parser.add_argument('--root_file', default='oss://public-pdf-extract-kit/test-env/doc_xcy_for_rag/',
+    parser.add_argument('--root_file', default='',
                         help="所有的问题类型")
     args = parser.parse_args()
     top_n_queries = 30

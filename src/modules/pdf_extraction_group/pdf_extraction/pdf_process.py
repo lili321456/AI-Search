@@ -263,7 +263,7 @@ def process_fast_mode(oss_id: str, file_id: str):
     # 切换muxi pdf解析接口
     # todo: 是否还需切换回电信pdf解析服务
     header = {
-        'Authorization': 'Bearer sk-c7ziokjnv7hldcpb'
+        'Authorization': 'xxx'
     }
     response = requests.post(PDF_EXTRACT_URL, headers = header, files=files, timeout=40)
 
@@ -297,7 +297,7 @@ def process_textonly_mode(_id:str, oss_id: str, file_id: str):
     while retries < max_retries:
         try:
             header = {
-                'Authorization': 'Bearer sk-c7ziokjnv7hldcpb'
+                'Authorization': 'xxx'
             }
             response = requests.post(PDF_EXTRACT_URL, headers=header, files=files, timeout=40)
             response.raise_for_status()
@@ -387,9 +387,7 @@ import time
 if __name__ == '__main__':
     # file upload and process
     st = time.time()
-    # file_path = '/Users/przhang/Downloads/test_pdf/新亚制程2023年年度报告(更正后)-2024-08-31.pdf'
-    oss_id = 'oss://public-pdf-extract-kit/test-env/doc_xcy/20240508_兴业证券*宏观专题*段超 卓泓 王笑笑 王轶君 彭华莹 郑兆磊 占康萍 金淳 于长馨 王祉凝 谢智勇*【兴证宏观】20240508-外乱内稳下的资产配置-兴业证券宏观.pdf'
-    oss_id = 'oss://public-pdf-extract-kit/test-env/doc_xcy/samples_inner_xcy.txt'
+    oss_id = 'oss://public-pdf-extract-kit/test-env/doc_xxx/samples_inner.txt'
     file_id = hashlib.md5(oss_id.encode('utf-8')).hexdigest()
     logger.info(file_id)
     pdf_process('test_123', oss_id, 'test123', mode='fast', type_='pdf')
@@ -410,8 +408,5 @@ if __name__ == '__main__':
                            doc_id=[oss_id], topk=100)
     print(res)
     res = load_from_milvus(queries_embedding,
-                           doc_id=['pdf-source-file/外乱内稳下的资产配置-兴业证券宏观.pdf'], topk=100)
+                           doc_id=['pdf-source-file/example.pdf'], topk=100)
     print(res)
-
-    # process_image
-    # process_image('pdf-extracted-element/b9c83b6e69ab17e6d3ce7cc23055cefd/99bfe747-3b73-4597-8819-786ff3b58856.jpg')

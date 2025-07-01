@@ -411,7 +411,7 @@ if __name__ == "__main__":
     # 本地测试, 解注释这里--- 
     from mongoengine import connect
     mongo_config = {
-        "Host": "123.57.48.226",
+        "Host": "xxx",
         "Port": 27018,
         "DB": "llm",
         "Username": "admin",
@@ -435,7 +435,7 @@ if __name__ == "__main__":
     context.add_single_question(request_id=get_md5(query), question_id=get_md5(query), question=query, pdf_ids = oss_id)
     context.set_doc_query_type("具体问题")
     # ####test1
-    with open("/Users/niu/Downloads/sample_outline_cn.json", "r") as f:
+    with open("/Users/xxx/Downloads/sample_outline_cn.json", "r") as f:
         document = json.load(f)
     PdfOutlineResult.objects(oss_id=oss_id).delete()  # 清空
     document = {"data":[{
@@ -478,29 +478,16 @@ if __name__ == "__main__":
             "poly": [0.12, 0.13, 0.23, 0.15],
             "text": "菲律宾用电量统计图" + str(i)
         })
-    # oss_id = 'pdf-source-file/中国石化中国石化2024年半年度报告-2024-08-26.pdf'
     res = DocPreCOT().pre_doc_cot("docid", oss_id, document)
     print("mongoDB储蓄：", res)
     exit()
 
-    # # ### test1
-    # res = extract_mongo_data("oss://public-xinyu/test-env/doc_search/test1/test_finance_0913.pdf")
+    # test1
     res = extract_mongo_data("oss://public-xinyu/test-env/doc_search/test1/17a45f709b5a9a1773e941f199bc5d19.pdf")
     print(res)
-    # res_tmp = [item.type for item in res]
-    # print(len(res_tmp))
-    # print(*[item.pre_cot for item in res])
-    # exit()
 
 
     # # ####test2
     cot_tool = QueryDivisionDocCoTTask(context)
     cot_tool.get_cot()
     res = context.get_dag().get_turns()
-    # print(res)
-    # res = extract_mongo_data(oss_id="oss://public-xinyu/test-env/doc_search/test1/test_finance_0913.pdf")
-    # print(res)
-
-
-    #  '/Users/niu/code/[德邦证券]-德邦金工2022年度策略报告：进击的“小巨人”.pdf'
-    # "/Users/niu/Documents/比亚迪Q2.pdf"

@@ -121,7 +121,7 @@ if __name__ == '__main__':
     print(len(queries_embedding))
     # print(queries_embedding)
     
-    res = load_from_milvus(queries_embedding, doc_id=["oss://public-xinyu/test-env/doc_search/test1/09f668cc9f19475b3ade79bda7411228.pdf"], user_id='test_przhang_1234', mode = True)
+    res = load_from_milvus(queries_embedding, doc_id=["oss://public-xinyu/test-env/doc_search/test1/09f668cc9f19475b3ade79bda7411228.pdf"], user_id='test_1234', mode = True)
     print(len(res))
     print(res)
 

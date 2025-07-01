@@ -104,7 +104,7 @@ if __name__ == '__main__':
 
     random.seed(args.seed)
 
-    with open("../dataset_xcy/dureader2_0/preprocessed/trainset/train.jsonl", 'r', encoding='utf-8') as file:
+    with open("../dataset/dureader2_0/preprocessed/trainset/train.jsonl", 'r', encoding='utf-8') as file:
         # 逐行读取
         data = [json.loads(line) for line in file]
 

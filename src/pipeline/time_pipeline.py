@@ -28,7 +28,7 @@ def one_execute(query):
     # time_log.info(json.dumps({"session_id": session_id, "request_id": request_id, "module_name": "supply_question", "cost_time": cost_time}, ensure_ascii=False))
 
 
-    body = {"query": query, "type": "fisrt", "ip": "47.116.190.119"}
+    body = {"query": query, "type": "fisrt", "ip": "xxx"}
     header = {"session_id": session_id, "request_id": request_id}
     st2 = time.time()
     try:

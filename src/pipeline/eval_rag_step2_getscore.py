@@ -9,7 +9,7 @@ from include.utils.timeline_utils import clean_json_str
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
 
 
-key = "sk-plRSdCGsEhjUsZhA16D22444D39b42E2A41cB15982B99377"
+key = "xxx"
 
 PROMPT_TEMPLETE= """
 你是一个评委，根据问题和标准答案对学生的答案进行打分。打分规则如下：
@@ -34,7 +34,7 @@ PROMPT_TEMPLETE= """
 }}
 """
 def send_request_to_gpt4(prompt):
-    url = "http://47.88.65.188:8300/v1/chat/completions"
+    url = "xxx"
     payload = json.dumps({
         "model": "gpt-4o",
         "messages": [
@@ -88,10 +88,10 @@ if __name__ == "__main__":
     is_continue = False
     long_context=20000
     exp_name = "qa_exam_241111_random_choose50_memory"  # ['exam_cmmlu', 'exam_version_241104', 'qa_exam_241111_random_choose50']
-    llm_response_file_path = "/Users/carol/Documents/code/AINewsQA/pipeline/pipeline_data_xcy/results/rag_eval_{}_{}.json".format(exp_name, pro_flag)
-    save_path = "/Users/carol/Documents/code/AINewsQA/pipeline/pipeline_data_xcy/results/rag_eval_{}_{}_score.json".format(
+    llm_response_file_path = "/Users/xxx/Documents/code/AINewsQA/pipeline/pipeline_data_xxx/results/rag_eval_{}_{}.json".format(exp_name, pro_flag)
+    save_path = "/Users/xxx/Documents/code/AINewsQA/pipeline/pipeline_data_xxx/results/rag_eval_{}_{}_score.json".format(
         exp_name, pro_flag)
-    score_path = "/Users/carol/Documents/code/AINewsQA/pipeline/pipeline_data_xcy/results/rag_eval_{}_{}_final_score.json".format(
+    score_path = "/Users/xxx/Documents/code/AINewsQA/pipeline/pipeline_data_xxx/results/rag_eval_{}_{}_final_score.json".format(
         exp_name, pro_flag)
 
     with open(llm_response_file_path,'r',encoding="utf-8") as llm_file:

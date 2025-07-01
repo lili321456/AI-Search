@@ -11,7 +11,7 @@ import json
 from pathlib import Path
 from pymongo import MongoClient
 
-uri = 'xxx'
+uri = 'xxx' # replace it with your own mongoclient uri
 conn = MongoClient(uri)
 
 

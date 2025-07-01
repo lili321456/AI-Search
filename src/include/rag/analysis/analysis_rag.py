@@ -19,12 +19,9 @@ def get_date(text):
 
 
 if __name__ == '__main__':
-    # 打开log文件
-    # with open('log_xcy/ainews/context_logger.2024-09-29_09-24-34_266202.log', 'r', encoding='utf-8') as file:
-    #     log_lines = file.readlines()
 
     # 指定要遍历的文件夹路径
-    folder_path = 'log_xcy/ainews/'
+    folder_path = 'log/ainews/'
 
     # 定义一个存储结果的列表
     all_results = []
@@ -55,7 +52,7 @@ if __name__ == '__main__':
                         # 将块中的行组合成一个字符串
                         combined_block = ''.join(current_block)
                         # 检查是否包含目标关键词
-                        if "最终问题回答 prompt:你是上海算法创新研究院开发的人工智能助手" in combined_block:
+                        if "最终问题回答 prompt:" in combined_block:
                             result.append(combined_block.strip())
                     # 开始一个新的块
                     current_block = [line]
@@ -66,7 +63,7 @@ if __name__ == '__main__':
             # 检查最后一个块
             if current_block:
                 combined_block = ''.join(current_block)
-                if "最终问题回答 prompt:你是上海算法创新研究院开发的人工智能助手" in combined_block:
+                if "最终问题回答 prompt:" in combined_block:
                     result.append(combined_block.strip())
 
             # 将当前文件的结果加入到总结果中
@@ -106,6 +103,6 @@ if __name__ == '__main__':
             traceback.print_exc()
 
     # 将字典写入 JSON 文件
-    with open('log_xcy/references_result_raw.json', 'w') as json_file:
+    with open('log/references_result_raw.json', 'w') as json_file:
         json.dump(all_results_dict, json_file, indent=4, ensure_ascii=False)
 

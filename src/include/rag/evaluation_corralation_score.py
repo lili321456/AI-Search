@@ -72,7 +72,7 @@ if __name__ == '__main__':
     ]
 
     def evaluate(file_path):
-        with open('rag_evaluation_xcy/{}.json'.format(file_path), 'r', encoding='utf-8') as file:
+        with open('rag_evaluation/{}.json'.format(file_path), 'r', encoding='utf-8') as file:
             res_lis = json.load(file)
             res_lis = res_lis[:]
             for res in res_lis:
@@ -87,7 +87,7 @@ if __name__ == '__main__':
         with ThreadPoolExecutor(1) as executor:
             scores = list(executor.map(process_source, res_lis))
 
-        with open("rag_evaluation_xcy/score_{}.json".format(file_path), 'w', encoding="utf-8") as f:
+        with open("rag_evaluation/score_{}.json".format(file_path), 'w', encoding="utf-8") as f:
             json.dump(scores, f, indent=4, ensure_ascii=False)
     #
     # scores = []
@@ -96,7 +96,7 @@ if __name__ == '__main__':
 
     scores = []
     for file_path in files:
-        with open('rag_evaluation_xcy/score_{}.json'.format(file_path), 'r', encoding='utf-8') as file:
+        with open('rag_evaluation/score_{}.json'.format(file_path), 'r', encoding='utf-8') as file:
             res = json.load(file)
             scores.append(res)
 
