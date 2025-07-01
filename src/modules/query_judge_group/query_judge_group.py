@@ -12,7 +12,6 @@ from include.decorator import timer_decorator
 
 class QueryJudgeTask:
     """ 问题属性判定
-    负责人：牛怡珺
     """
     def __init__(self, rag_qa_context: RagQAContext):
         self.context = rag_qa_context

@@ -15,7 +15,7 @@ from include.decorator import timer_decorator
 
 class RemoveDuplicatedEvent:
     """
-    事件信息去重模块（负责人：葛运航）
+    事件信息去重模块
     必传入参
     question_id = self.context.get_question_id()
     dag=self.context.get_timeline_dag()

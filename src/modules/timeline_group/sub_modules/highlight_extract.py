@@ -15,7 +15,7 @@ from include.utils.timeline_utils import get_dag_query_list
 
 class HighlightExtract:
     """
-    highlight提取模块（负责人：葛运航）
+    highlight提取模块
     必传入参
     question_id = self.context.get_question_id()
     timeline_sort_events = self.context.get_timeline_sort_events()

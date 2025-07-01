@@ -11,7 +11,7 @@ import json
 from pathlib import Path
 from pymongo import MongoClient
 
-uri = 'mongodb://xinyu_read:7inv8hwDly5yeAlE@dds-uf61cedad15179242978-pub.mongodb.rds.aliyuncs.com:3717,dds-uf61cedad15179241223-pub.mongodb.rds.aliyuncs.com:3717/admin?replicaSet=mgset-81098053'
+uri = 'xxx'
 conn = MongoClient(uri)
 
 

@@ -2,7 +2,7 @@ import json
 
 
 data = []
-with open("/data/tzy/AINewsQA/log/time_logger.log") as file:
+with open("/data/xxx/AINewsQA/log/time_logger.log") as file:
     for line in file:
         item = line.strip().split(" ##｜## ")[-1]
         data.append(json.loads(item))

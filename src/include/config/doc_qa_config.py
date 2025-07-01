@@ -8,24 +8,24 @@ class DocQAConfig(CommonConfig):
             # XX_MODEL_CONFIG 是基于CommonConfig.MODEL_CONFIG 对每个项目新增部署模型的调用配置
             # 每新增一个线上部署模型，需在llm_caller_utils增加对应call_xxxx函数，并在llm_caller_utils.get_llm_call_fun增加模型调用逻辑
             "RAG_MODEL_CONFIG": {
-                "url": "http://8.139.7.132:10000/api/forward",
+                "url": "xxx",
                 "qwen14_qa_comm_11_v2": "qwen14_qa_comm_11_v2"
             },
             "FIG_CONFIG": {
-                "url": "http://114.94.99.192:28034/image/insert_images",
-                "url_duplicate": "http://114.94.99.192:28034/image/images_filtering_url_mp",
+                "url": "xxx",
+                "url_duplicate": "xxx",
                 'token': "xxx",
                 "bucket_name": "public-crawler",
                 "is_limit_candidate_image": "true",
                 "limit_candidate_image_size": 60,
             },
             "CHART_UNDERSTANDING": {
-                "url": "http://106.14.69.254:9008/algo/multimodal",
+                "url": "xxx",
                 "token": "xxx",
-                "path_prefix": "https://public-pdf-extract-kit.oss-cn-shanghai.aliyuncs.com/"
+                "path_prefix": "xxx"
             },
             "QA_QREINFORCE_QMultiHop_MODEL_CONFIG": {
-                "url": "http://114.94.99.192:28034/fschat/generate",
+                "url": "xxx",
                 "qwen14_xinhua_rag_vllm": "qwen1514_xinhua_rag_vllm",
                 "key": "xxx",
                 "retry_time": 5
@@ -58,8 +58,8 @@ class DocQAConfig(CommonConfig):
             },
             "FIRST_SENTENCE_CONFIG": 0.995,
             "IAAR_DataBase_Doc": {
-                "url": 'http://120.55.164.41:8010/api/atlas/detail/search',
-                "url_topnews": 'http://120.55.164.41:8010/api/atlas/topnews/search',
+                "url": 'xxx',
+                "url_topnews": 'xxx',
                 "access_key": "xxx",
                 "file_database_default_param": {
                     "search_type": ["online"],
@@ -111,8 +111,8 @@ class DocQAConfig(CommonConfig):
                 "is_use": False
             },
             "PDF_CHUNK_SPLIT": {
-                "url": "https://cloud.infini-ai.com/AIStudio/inference/api/if-daebhz7f4bdf2gph/process_chunks",
-                "key": "Bearer sk-c7ziokjnv7hldcpb"
+                "url": "xxx",
+                "key": "xxx"
             }
         }
         )

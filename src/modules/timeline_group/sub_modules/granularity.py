@@ -13,7 +13,7 @@ from include.decorator import timer_decorator
 
 class Granularity:
     """
-    时间粒度生成（负责人：魏文强）
+    时间粒度生成
     """
 
     def __init__(self, rag_qa_context: RagQAContext):

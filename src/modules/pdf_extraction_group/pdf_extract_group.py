@@ -7,7 +7,6 @@ from include.decorator import timer_decorator
 
 class PDFExtractGroup:
     """ pdf解析存储task
-        负责人：张沛然
         必传入参:
             session_id = context.get_session_id()
     """

@@ -17,7 +17,6 @@ from include.decorator import timer_decorator
 from include.utils.call_white_list import search_whitelist
 class FurtherQuestionRecommendTask:
     """ 追问问题推荐 task
-        负责人：李春宇
         必传入参:
             session_id = context.get_session_id()
             request_id = context.get_request_id()

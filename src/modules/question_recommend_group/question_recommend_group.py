@@ -18,7 +18,6 @@ from include.utils.skywalking_utils import trace_new, record_thread
 
 class QuestionRecommendTask:
     """ 问题推荐 task
-        负责人：李春宇
         必传入参:
             session_id = context.get_session_id()
     获取本模块执行结果

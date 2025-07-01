@@ -12,7 +12,7 @@ from include.utils.release_bot import env_test_release_bot,get_current_git_branc
 
 
 
-URL = 'http://127.0.0.1:10051'
+URL = 'xxx'
 
 # 第一部分，互联网检索问答
 def ainews_test_recommend_query():

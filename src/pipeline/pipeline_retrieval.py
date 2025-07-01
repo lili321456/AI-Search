@@ -10,11 +10,11 @@ def send_request_to_gpt4(prompt, new=True):
     #prompt=ans["prompt"]
     ## 并发版本
     if new:
-        url = "http://47.254.95.21:8001/v1/chat/completions"
-        sk = "sk-QAeNMmmqjGGIVje94515957dF0644fB4Bd4d917d927bE2F2"
+        url = "xxx"
+        sk = "xxx"
     else:
-        url = "http://185.200.64.16:8660/v1/chat/completions"
-        sk = "sk-AgIDbvVGdEb9Od6lF9A94e4e6d624a17B7Fc055d6c1eA31b"
+        url = "xxx"
+        sk = "xxx"
 
     payload = json.dumps({
        "model": "gpt-4o",

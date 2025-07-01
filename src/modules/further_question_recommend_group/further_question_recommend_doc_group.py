@@ -6,7 +6,6 @@ from modules.further_question_recommend_group.further_question_recommend_group i
 
 class FurtherQuestionRecommendDocTask(FurtherQuestionRecommendTask):
     """ 追问问题推荐 task
-        负责人：李春宇
         必传入参:
             session_id = context.get_session_id()
             request_id = context.get_request_id()

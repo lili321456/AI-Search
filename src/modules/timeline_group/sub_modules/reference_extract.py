@@ -18,7 +18,7 @@ from include.decorator import timer_decorator
 
 class ReferenceExtract:
     """
-    时间线问题改写模块（负责人：葛运航）
+    时间线问题改写模块
     必传入参
         ori_query = self.context.get_question()
         question_id = self.context.get_question_id()

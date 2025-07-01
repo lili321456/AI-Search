@@ -8,7 +8,7 @@ class RagQAConfig(CommonConfig):
             # XX_MODEL_CONFIG 是基于CommonConfig.MODEL_CONFIG 对每个项目新增部署模型的调用配置
             # 每新增一个线上部署模型，需在llm_caller_utils增加对应call_xxxx函数，并在llm_caller_utils.get_llm_call_fun增加模型调用逻辑
             "RAG_MODEL_CONFIG": {
-                "url": "http://8.139.7.132:10000/api/forward",
+                "url": "xxx",
                 "qwen14_qa_comm_11_v2": "qwen14_qa_comm_11_v2"
             },
             "FIG_CONFIG": {

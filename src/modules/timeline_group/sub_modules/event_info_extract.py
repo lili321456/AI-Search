@@ -16,7 +16,7 @@ from include.decorator import timer_decorator
 
 class EventInfoExtract:
     """
-    文档级别的事件信息抽取模块（负责人：宋云龙）
+    文档级别的事件信息抽取模块
     """
     def __init__(self, rag_qa_context: RagQAContext):
         self.context = rag_qa_context

@@ -110,7 +110,6 @@ def multimodal_image_process(pdf_element):
     return pdf_element
 
 """
-todo:不同预处理策略，@cyxi实验完善
 embedding预处理,用于获取需要embedding的文本信息
 mode: fast/normal/accurate
 fast模式: 直接获取pdf_element的text字段,返回类型为str

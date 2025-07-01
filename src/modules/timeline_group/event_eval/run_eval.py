@@ -158,6 +158,6 @@ def eval(labels_path, predict_path):
 
 
 if __name__ == "__main__":
-    labels_path = "/Users/chunyuli/Documents/workspace/AINewsQA/data/qa/timeline_groudTruth.json"
-    predict_path = "/Users/chunyuli/Documents/workspace/AINewsQA/data/qa/timeline_groudTruth.json"
+    labels_path = "/Users/xxxx/Documents/workspace/AINewsQA/data/qa/timeline_groudTruth.json"
+    predict_path = "/Users/xxxx/Documents/workspace/AINewsQA/data/qa/timeline_groudTruth.json"
     eval(labels_path, predict_path)

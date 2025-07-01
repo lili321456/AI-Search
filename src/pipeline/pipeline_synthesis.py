@@ -165,7 +165,7 @@ if __name__ == '__main__':
     random.seed(args.seed)
     parallel_batch = args.parallel_batch
     data = []
-    with open("/Users/niu/code/AINewsQA/data/qa/iaar_150.txt", 'r', encoding='utf-8') as file:
+    with open("/Users/xxx/code/AINewsQA/data/qa/iaar_150.txt", 'r', encoding='utf-8') as file:
         for line in file:
             data.append({"question": line.strip()})
             break
@@ -174,4 +174,4 @@ if __name__ == '__main__':
     last_time = time.time()
     res_write_output_func(
         data, num_valid_text, parallel_batch,
-        "/Users/niu/code/AINewsQA/data/result/AINews_answer_{}.json".format(args.exp_name))
+        "/Users/xxx/code/AINewsQA/data/result/AINews_answer_{}.json".format(args.exp_name))
