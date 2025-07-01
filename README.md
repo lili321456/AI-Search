@@ -33,7 +33,8 @@ ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expec
 
 ## Add some settings
 - Add your own elasticsearch and milvus setting in line 103-111 of the file `include/config/common_config.py` and line 9-18 of the file `include/config/query_recommend_config.py`.
-- Add your own ner setting in line 37-40 of the file `include/config/common_config.py`.
+- Add your own NER setting in line 37-40 of the file `include/config/common_config.py`.
+- Add your own mongodb connection strings in line 14 of the file `include/config/get_special_user_id.py`
 
 ## Start your first query
 You can input your query in line 395 of the file `pipeline/functions.py`.
